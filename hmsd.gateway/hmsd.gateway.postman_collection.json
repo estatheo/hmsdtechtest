@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "497901bf-9d8f-41f2-9a71-c6e2c1c05e3c",
+		"name": "hmsd.gateway",
+		"description": "hi mum said dad technical test, gateway endpoints collection\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:43984/api/key",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:43984/api/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "43984",
+					"path": [
+						"api",
+						"key"
+					]
+				},
+				"description": "key rotation endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:43984/api/decrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"secret\": \"x9A13lyIxMStQ2Z6MqLEQVSGF+70T2SXFjGwVZcI6b8ChU7kJPjE+lZjbr7gaQHW\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:43984/api/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "43984",
+					"path": [
+						"api",
+						"decrypt"
+					]
+				},
+				"description": "decrypt endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:43984/api/encrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"secret\": \"Encrypt this!\" \n}"
+				},
+				"url": {
+					"raw": "http://localhost:43984/api/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "43984",
+					"path": [
+						"api",
+						"encrypt"
+					]
+				},
+				"description": "encrypt endpoint"
+			},
+			"response": []
+		}
+	]
+}
